@@ -1,0 +1,281 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>TP LAMP</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="2TSSI-SISR-codelab-LAMP"
+                  title="TP LAMP"
+                  environment="web"
+                  feedback-link="Un lien vers lequel les utilisateurs peuvent signaler un bug">
+    
+      <google-codelab-step label="Rendu écrit" duration="5">
+        <p>Dans ce TP vous allez être amené à répondre à des questions. </p>
+<ul>
+<li>Vous devrez écrire ces réponses sur une feuille double A4 et écrire le titre du TP (situé en haut à gauche de ce site). </li>
+<li>Vous devrez également indiquer votre nom, prénom, classe. </li>
+<li>Vous utiliserez un stylo de couleur noir ou bleu. </li>
+<li>Vous préciserez le numéro de la question lors de la rédaction de vos réponses. (Vous n&#39;êtes pas obligé de recopier les questions)</li>
+</ul>
+<p class="image-container"><img style="width: 718.11px" src="img\\9e98e2e9eb935ddf.jpeg"></p>
+<aside class="warning"><p>Si les conditions spécifiées précédemment ne sont pas remplies au moment de la lecture de la copie, des points de pénalité peuvent s&#39;appliquer.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Mise en place de l&#39;environnement de travail" duration="10">
+        <p>Matériels nécessaire : </p>
+<ul>
+<li>Une clef USB formatée en exFAT ou NTFS avec 20Go de disponible</li>
+<li>Le fichier <code>2TSSI-SISR-BRUNO.ova</code></li>
+</ul>
+<h2 is-upgraded><strong>Importer la machine virtuelle</strong></h2>
+<h3 is-upgraded><strong>Méthode 1 : avec un fichier .ova</strong></h3>
+<p>Ouvrir VirtualBox puis cliquer sur <code>Fichier>Importer un appareil virtuel...</code></p>
+<p class="image-container"><img style="width: 654.00px" src="img\\4ecb31e48fff45c7.png"></p>
+<p>Sélectionner le fichier <code>2TSSI-SISR-BRUNO.ova</code></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\9d34252e3351e0.png"></p>
+<p>Renommer la machine sous la forme <code>2TSSI-SISR-PRENOM</code>. Vous remplacerez le champ <code>PRENOM</code> par votre prénom : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\988e4f64a37af480.png"></p>
+<p>Indiquer l&#39;emplacement de stockage de la VM. Vous devrez stocker la VM sur votre clef USB dans le dossier suivant : <code><lecteur USB>/2TSSI/VM multi-usages/</code></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\b118270b8d979770.png"></p>
+<p>Demander à VirtualBox de générer de nouvelles adresses MAC au moment de l&#39;importation de cette VM. Cela évite que les VM possèdent les mêmes adresses MAC et par conséquent soient identiques sur un réseau.</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\a8d732f96e47d6e5.png"></p>
+<p>Enfin cliquer sur Importer</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\850196cf27fb0637.png"></p>
+<h3 is-upgraded><strong>Méthode 2 : en clonant la VM d&#39;origine</strong></h3>
+<p>Si au moment de l&#39;importation il y a un message d&#39;erreur, dans ce cas vous pouvez passer par la méthode suivante pour importer la VM.</p>
+<p>Ajouter la machine d&#39;origine à VirtualBox :  </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\d063f184f2a1f472.png"></p>
+<p>Sélectionner le fichier <code>2TSSI-SISR-BRUNO.vbox</code> </p>
+<p class="image-container"><img style="width: 244.00px" src="img\\bb013be09db90a44.png"></p>
+<p>La machine s&#39;affiche alors dans VirtualBox : </p>
+<p class="image-container"><img style="width: 686.00px" src="img\\197b1d2e871bf8b8.png"></p>
+<p>Cloner la machine : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\9061300f37211dda.png"></p>
+<p>Renommer la machine sous la forme <code>2TSSI-SISR-PRENOM</code>. Vous remplacerez le champ <code>PRENOM</code> par votre prénom : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\12b8d009fd4858b1.png"></p>
+<p>Indiquer l&#39;emplacement de stockage de la VM. Vous devrez stocker la VM sur votre clef USB dans le dossier suivant : <code><lecteur USB>/2TSSI/VM multi-usages/</code></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\5d11282ebaf2ab2f.png"></p>
+<p>Demander à VirtualBox de générer de nouvelles adresses MAC au moment de l&#39;importation de cette VM. Cela évite que les VM possèdent les mêmes adresses MAC et par conséquent soient identiques sur un réseau.</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\e4acac9d6561d3d0.png"></p>
+<p>Cliquer sur suivant puis choisir un clone intégral : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\dac2bfaf8a7f7829.png"></p>
+<p>Choisir de copier également les instantanés (snapshot) de la machine : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\7df00ed6bf1424bf.png"></p>
+<h2 is-upgraded><strong>Démarrer la VM</strong></h2>
+<p>Cliquer sur <code>Demarrer</code> pour ouvrir votre VM</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\d0d2a12b5f43d3ec.png"></p>
+<p>Si il y a un bug d&#39;affichage et que vous ne pouvez pas mettre la VM en pleine écran : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\52f05d2575c65a48.png"></p>
+<p>Alors redémarrer Ubuntu</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\2ab170bd0f7a83c0.png"></p>
+<p>Ainsi le bug d&#39;affichage est résolu et vous pouvez positionner la VM en pleine écran ou sur une moitié d&#39;écran : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\25483cde87f7e2b0.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation de Apache" duration="5">
+        <h2 is-upgraded><strong>Installation des paquets</strong></h2>
+<aside class="special"><p><strong>❤ Quelle commande permet d&#39;installer des paquets sur Linux ?</strong></p>
+<p><code>sudo apt install <packet> <packet 2> etc ...</code></p>
+</aside>
+<aside class="special"><p><strong>❤ Quelle commande permet de désinstaller des paquets ainsi que leurs fichiers de configuration ? </strong></p>
+<p><code>sudo apt purge <paquets(s)></code></p>
+</aside>
+<ol type="1" start="1">
+<li>Quelle commande permet d&#39;installer le paquet <code>apache2</code> ? Tapez cette commande dans le terminal de votre VM.</li>
+</ol>
+<p>Une fois les paquets installés, ouvrez un des liens suivants dans votre navigateur :</p>
+<ul>
+<li><a href="http://localhost" target="_blank">http://localhost</a></li>
+<li><a href="http://127.0.0.1/" target="_blank">http://127.0.0.1/</a></li>
+</ul>
+<p>Le message « It works! » s&#39;affiche, votre serveur LAMP est correctement installé.</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\b24599cbce68397c.png"></p>
+<aside class="warning"><p>Selon la version installée, vous pouvez aussi avoir une page intitulée « Apache2 Ubuntu Default Page ».</p>
+</aside>
+<h2 is-upgraded><strong>Rappels de cours : </strong></h2>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet de changer de répertoire ?</strong></p>
+<p><code>cd [DIRECTORY]</code></p>
+</aside>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet de lister le contenu d&#39;un dossier ?</strong></p>
+<p><code>ls</code></p>
+</aside>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet de supprimer des fichiers ou des répertoires ?</strong></p>
+<p>Pour un fichier :  <code>rm FILE</code></p>
+<p>Pour un répertoire, on utilise l&#39;option récursive (-r) : <code>rm -r [DIRECTORY]</code></p>
+</aside>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet de créer un fichier ?</strong></p>
+<p><code>touch FILE</code></p>
+</aside>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet d&#39;afficher dans la console un fichier ?</strong></p>
+<p><code>cat [FILE]</code></p>
+</aside>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet d&#39;éditer un fichier ?</strong></p>
+<p><code>sudo</code> <code>nano [FILE]</code></p>
+</aside>
+<aside class="special"><p>❤ <strong>Quelle commande Linux permet d&#39;exécuter la commande précédente en sudo  ?</strong></p>
+<p><code>sudo !!</code></p>
+</aside>
+<h2 is-upgraded><strong>Personnalisation du serveur</strong></h2>
+<p>Nous allons modifier la page d&#39;accueil par défaut afin qu&#39;elle ressemble à ceci : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\fe932b0e1deb32a0.png"></p>
+<p>Placez-vous dans le dossier  <code>/var/www/html</code></p>
+<ol type="1" start="2">
+<li>Quelle commande affiche le contenu du dossier <code>/var/www/html</code>. Utiliser cette commande</li>
+</ol>
+<ol type="1" start="3">
+<li>Quelle commande affiche dans le console le fichier <code>index.html</code>. Pourquoi peut-on dire que ce fichier correspond à la page d&#39;accueil de Apache 2 ?</li>
+</ol>
+<ol type="1" start="4">
+<li>Quelle commande supprime le fichier <code>index.html</code> ? Utiliser cette commande, si un message d&#39;erreur s&#39;affiche faire les commandes suivantes : </li>
+</ol>
+<p class="image-container"><img style="width: 718.11px" src="img\\94e5836b70c10e1c.png"></p>
+<ol type="1" start="5">
+<li>Quelle commande crée un fichier <code>index.html</code> ? Utiliser cette commande.</li>
+<li>Quel code HTML permet de produire la page suivante. Ecrire ce code sur votre feuille ainsi que dans le fichier index.html</li>
+</ol>
+<p class="image-container"><img style="width: 718.11px" src="img\\fe932b0e1deb32a0.png"></p>
+<p>Aller sur le site <a href="http://localhost" target="_blank">http://localhost</a> ou <a href="http://127.0.0.1/" target="_blank">http://127.0.0.1/</a> pour visualiser le rendu de votre page.</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\12ea6d47f11004d1.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation de PHP" duration="0">
+        <p>Afin de faire un site Web dynamique, on a besoin d&#39;utiliser un langage de programmation. On utilisera ce langage pour générer en autre du code HTML qui sera utilisé dans les pages envoyées aux clients. C&#39;est donc le serveur Web qui se charge d&#39;exécuter le code avant d&#39;envoyer le résultat aux clients. Nous utiliserons ici le langage PHP.</p>
+<p class="image-container"><img style="width: 570.00px" src="img\\999701d46988831f.png"></p>
+<ol type="1" start="7">
+<li>Quelle commande permet d&#39;installer le paquet <code>libapache2-mod-php</code> ? Taper cette commande.</li>
+</ol>
+<p>Vérifier que le module php a bien été activé par défaut en consultant le contenu du dossier <code>/etc/apache2/mods-enabled</code></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\1e6c95978f369198.png"></p>
+<p>Pour tester que PHP est bien supporté, créez le fichier <code>info.php</code> dans le répertoire <code>/var/www/html</code> avec le contenu suivant :</p>
+<p><code>/var/www/html/info.php</code></p>
+<pre>&lt;?php phpinfo(); ?&gt;</pre>
+<p>Rendez vous alors sur la page <a href="http://localhost/info.php" target="_blank">http://localhost/info.php</a></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\c2d82955e6ac781d.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation de MySQL" duration="0">
+        <aside class="special"><p><strong>❤ Qu&#39;est-ce qu&#39;un SGBD ?</strong></p>
+<p>Un système de gestion de base de données (SGBD) est un logiciel installé sur un serveur qui permet de créer et de gérer des bases de données.</p>
+</aside>
+<ol type="1" start="8">
+<li>Quelle commande permet d&#39;installer le paquet <code>mysql-server</code> ? Taper cette commande.</li>
+</ol>
+<p>Pour vérifier que MySQL est bien installé, lancer  la console MySQL: </p>
+<pre>sudo mysql</pre>
+<p>Vous arriverez alors sur un prompt du type :</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\49664ec7df57922d.png"></p>
+<p>Vous pouvez désormais taper des commandes SQL. </p>
+<p>Taper la commande <code>show databases;</code> pour afficher les bases de données.</p>
+<p class="image-container"><img style="width: 408.00px" src="img\\54b88aa7933c08c8.png"></p>
+<p>Taper la commande <code>use mysql;</code> pour utiliser la BDD (Base de Donnée) intitulée <code>mysql.</code></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\aa0975e8cdbc1f4c.png"></p>
+<p>Taper la commande <code>show tables;</code> pour afficher les tables qui se trouvent dans la BDD <code>mysql.</code></p>
+<p class="image-container"><img style="width: 718.11px" src="img\\82c161fba9523aae.png"></p>
+<p>Taper la commande <code>select Host,User from user;</code>  pour afficher la table <code>user</code>.</p>
+<p class="image-container"><img style="width: 554.00px" src="img\\805042e98b740ebb.png"></p>
+<p>Taper <code>exit</code> pour sortir de l&#39;environnement MySQL.</p>
+<p class="image-container"><img style="width: 516.00px" src="img\\75f3846361f7e778.png"></p>
+<p>Retourner dans la console MySQL et créer nouvelle base de données appelée <code>test</code> grâce à la commande : </p>
+<p class="image-container"><img style="width: 550.00px" src="img\\405f33d2c46d05b5.png"></p>
+<h2 is-upgraded><strong>Création d&#39;une table</strong></h2>
+<ol type="1" start="9">
+<li>En vous aidant de cet article : <a href="https://p-bruno.github.io/NSI-INSPE/Article%20SQL%20CREATE%20TABLE.html" target="_blank">SQL CREATE TABLE</a>, quelles commandes permettent de créer une table intitulée <code>Notes</code> dans la BDD <code>test</code> ? Taper cette commande.</li>
+</ol>
+<ol type="1" start="10">
+<li>En vous aidant de cet article : <a href="https://p-bruno.github.io/NSI-INSPE/Article%20SQL%20INSERT%20INTO.html" target="_blank">SQL INSERT INTO</a>, quelle commande permet d&#39;ajouter les lignes ci-dessous dans la table <code>Notes</code> ? Taper cette commande.</li>
+</ol>
+<p class="image-container"><img style="width: 718.11px" src="img\\2167b3ade3051ac6.png"></p>
+<ol type="1" start="11">
+<li>Quelle commande permet d&#39;afficher toutes les entrées de la table <code>Notes</code> ? Taper cette commande.</li>
+</ol>
+<p class="image-container"><img style="width: 718.11px" src="img\\4637e0967046c37.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Accès à la base de données en PHP" duration="0">
+        <p>Vous avez (presque) tout ce qu&#39;il faut pour créer votre site Web dynamique :</p>
+<p> Installez le paquet <code>php-mysql</code>.</p>
+<p> Relancez Apache avec la commande : </p>
+<pre>sudo systemctl restart apache2</pre>
+<p>Vérifier dans la sortie de <a href="http://localhost/info.php" target="_blank">http://localhost/info.php</a> que le support de MySQL est bien installé (il faut pour cela le driver mysql de PDO, cf image ci-dessous) :</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\98ec0cf26bbeed3a.png"></p>
+<h2 is-upgraded><strong>Ajout d&#39;un nouvel utilisateur dans MySQL</strong></h2>
+<p>Taper les commandes suivantes afin de créer un nouvel utilisateur dans MySQL et de lui donner des droits sur la BDD test : </p>
+<pre>mysql&gt;CREATE USER ‘toto&#39;@&#39;%&#39; IDENTIFIED BY &#39;motdepasse&#39;;
+mysql&gt;GRANT ALL ON test.* TO ‘toto&#39;@&#39;%&#39;</pre>
+<p class="image-container"><img style="width: 718.11px" src="img\\f6f7e7ca69044a99.png"></p>
+<p class="image-container"><img style="width: 651.00px" src="img\\31d614bced0be5c1.png"></p>
+<p>Le login de ce nouvel utilisateur est <code>toto</code>. Son mot de passe est <code>motdepasse</code>.</p>
+<ol type="1" start="12">
+<li>En utilisant cet article : <a href="https://p-bruno.github.io/NSI-INSPE/Article%20PHP%20MySQL%20Insert%20Data.html" target="_blank">PHP MySQL Insert Data</a>,écrire à l&#39;intérieur de info.php, le code permettant d&#39;ajouter la ligne ci-dessous lorsqu&#39;on tape la commande <code>php info.php</code>. </li>
+</ol>
+<p class="image-container"><img style="width: 718.11px" src="img\\4a1ee956b1e160a1.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Insérer des données dans la table" duration="0">
+        <h2 is-upgraded><strong>Présentation du projet </strong></h2>
+<p>L&#39;objectif dans cette partie est que l&#39;utilisateur puisse ajouter une nouvelle ligne dans la table <code>Notes</code> en passant par une page web. Cela donne : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\59ff1426f68f1357.png"></p>
+<p>Le serveur récupère le formulaire et ajoute une nouvelle ligne dans la table <code>Notes</code> avec les informations saisies par l&#39;utilisateur : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\42b7866fbc875a52.png"></p>
+<p>Si on affiche la table <code>Notes</code> on obtient : </p>
+<p class="image-container"><img style="width: 718.11px" src="img\\8c0762cb493b045c.png"></p>
+<h2 is-upgraded><strong>Documentation : </strong></h2>
+<p>Je vous invite à lire les articles suivants : </p>
+<ul>
+<li><a href="https://p-bruno.github.io/NSI-INSPE/Article-How-to-Insert-Form-Data-into-Database-using-PHP.html" target="_blank">How to Insert Form Data into Database using PHP ?</a></li>
+<li><a href="https://p-bruno.github.io/NSI-INSPE/Article-HTML-input-type-number.html" target="_blank">HTML &lt;input type=&#34;number&#34;&gt;</a></li>
+</ul>
+<h2 is-upgraded><strong>Instructions</strong></h2>
+<ul>
+<li>Modifier le fichier <code>/var/www/html/index.html</code> afin d&#39;y ajouter un formulaire et obtenir le résultat final suivant : </li>
+</ul>
+<p class="image-container"><img style="width: 718.11px" src="img\\60c2a8ae0485b8c.png"></p>
+<ul>
+<li>Créer un nouveau fichier intitulé <code>/var/www/html/insert.php</code></li>
+<li>Dans ce fichier écrire le code PHP permettant de récupérer les informations du formulaire, puis d&#39;envoyer une requête SQL.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

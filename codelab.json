@@ -3,9 +3,9 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2023-07-09T13:58:01Z",
-  "id": "2TSSI-SISR-codelab-LAMP",
-  "duration": 20,
+  "updated": "2023-08-21T13:15:09Z",
+  "id": "/Ressources/2TSSI-SISR-codelab-LAMP",
+  "duration": 105,
   "title": "TP LAMP",
   "summary": "",
   "source": "1uB32KjZYmblsl1nmWZHW5iYjeXmzh0jWUVmVh9yQ5qk",
@@ -14,5 +14,5 @@
   "category": null,
   "tags": [],
   "feedback": "Un lien vers lequel les utilisateurs peuvent signaler un bug",
-  "url": "2TSSI-SISR-codelab-LAMP"
+  "url": "/Ressources/2TSSI-SISR-codelab-LAMP"
 }

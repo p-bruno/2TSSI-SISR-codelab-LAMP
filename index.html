@@ -48,11 +48,25 @@
 <li>Une clef USB formatée en exFAT ou NTFS avec 20Go de disponible</li>
 <li>Le fichier <code>2TSSI-SISR-BRUNO.ova</code></li>
 </ul>
+<h2 is-upgraded><strong>Importation du fichier 2TSSI-SISR-BRUNO.ova</strong></h2>
+<p>Ouvrir l&#39;explorateur de fichier</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\e07bad6ae093ad7c.png"></p>
+<p>Aller dans &#34;autres emplacement&#34;&gt;ordinateur</p>
+<p>Vérifier que vous possédez le fichier : <code>/partage/bruno/2TSSI/VM multi-usages/2TSSI-SISR-BRUNO.ova</code></p>
+<p>Si vous ne possédez pas le fichier, alors connectez-vous au NAS puis copier/coller le fichier <code>/bruno/2TSSI/VM multi-usages/2TSSI-SISR-BRUNO.ova</code> dans le dossier <code>/Bureau/2TSSI/VM multi-usages/2TSSI-SISR-BRUNO.ova</code></p>
+<aside class="special"><p>Le dossier /partage est situé en local sur votre ordinateur. Il est partagé entre les sessions Prof/1TSIO/2TSIO.</p>
+<p>Le dossier /BRUNO du serveur NAS est un dossier distant.</p>
+<p>Durant l&#39;année nous allons essentiellement travailler avec des fichiers en local. Pour cela l&#39;enseignant placera les fichiers : </p>
+<ul>
+<li>Soit sur le serveur NAS : il faudra alors les copier/coller sur votre clef USB</li>
+<li>Soit sur le dossier /partage/bruno lorsque les fichiers sont volumineux. De même, il faudra copier/coller ces fichiers sur votre clef USB.</li>
+</ul>
+</aside>
 <h2 is-upgraded><strong>Importer la machine virtuelle</strong></h2>
-<h3 is-upgraded><strong>Méthode 1 : avec un fichier .ova</strong></h3>
+<h3 is-upgraded><strong>Méthode : avec un fichier .ova</strong></h3>
 <p>Ouvrir VirtualBox puis cliquer sur <code>Fichier>Importer un appareil virtuel...</code></p>
 <p class="image-container"><img style="width: 654.00px" src="img\\4ecb31e48fff45c7.png"></p>
-<p>Sélectionner le fichier <code>2TSSI-SISR-BRUNO.ova</code></p>
+<p>Sélectionner le fichier <code>/partage/bruno/2TSSI/VM multi-usages/2TSSI-SISR-BRUNO.ova</code></p>
 <p class="image-container"><img style="width: 718.11px" src="img\\9d34252e3351e0.png"></p>
 <p>Renommer la machine sous la forme <code>2TSSI-SISR-PRENOM</code>. Vous remplacerez le champ <code>PRENOM</code> par votre prénom : </p>
 <p class="image-container"><img style="width: 718.11px" src="img\\988e4f64a37af480.png"></p>
@@ -62,26 +76,6 @@
 <p class="image-container"><img style="width: 718.11px" src="img\\a8d732f96e47d6e5.png"></p>
 <p>Enfin cliquer sur Importer</p>
 <p class="image-container"><img style="width: 718.11px" src="img\\850196cf27fb0637.png"></p>
-<h3 is-upgraded><strong>Méthode 2 : en clonant la VM d&#39;origine</strong></h3>
-<p>Si au moment de l&#39;importation il y a un message d&#39;erreur, dans ce cas vous pouvez passer par la méthode suivante pour importer la VM.</p>
-<p>Ajouter la machine d&#39;origine à VirtualBox :  </p>
-<p class="image-container"><img style="width: 718.11px" src="img\\d063f184f2a1f472.png"></p>
-<p>Sélectionner le fichier <code>2TSSI-SISR-BRUNO.vbox</code> </p>
-<p class="image-container"><img style="width: 244.00px" src="img\\bb013be09db90a44.png"></p>
-<p>La machine s&#39;affiche alors dans VirtualBox : </p>
-<p class="image-container"><img style="width: 686.00px" src="img\\197b1d2e871bf8b8.png"></p>
-<p>Cloner la machine : </p>
-<p class="image-container"><img style="width: 718.11px" src="img\\9061300f37211dda.png"></p>
-<p>Renommer la machine sous la forme <code>2TSSI-SISR-PRENOM</code>. Vous remplacerez le champ <code>PRENOM</code> par votre prénom : </p>
-<p class="image-container"><img style="width: 718.11px" src="img\\12b8d009fd4858b1.png"></p>
-<p>Indiquer l&#39;emplacement de stockage de la VM. Vous devrez stocker la VM sur votre clef USB dans le dossier suivant : <code><lecteur USB>/2TSSI/VM multi-usages/</code></p>
-<p class="image-container"><img style="width: 718.11px" src="img\\5d11282ebaf2ab2f.png"></p>
-<p>Demander à VirtualBox de générer de nouvelles adresses MAC au moment de l&#39;importation de cette VM. Cela évite que les VM possèdent les mêmes adresses MAC et par conséquent soient identiques sur un réseau.</p>
-<p class="image-container"><img style="width: 718.11px" src="img\\e4acac9d6561d3d0.png"></p>
-<p>Cliquer sur suivant puis choisir un clone intégral : </p>
-<p class="image-container"><img style="width: 718.11px" src="img\\dac2bfaf8a7f7829.png"></p>
-<p>Choisir de copier également les instantanés (snapshot) de la machine : </p>
-<p class="image-container"><img style="width: 718.11px" src="img\\7df00ed6bf1424bf.png"></p>
 <h2 is-upgraded><strong>Démarrer la VM</strong></h2>
 <p>Cliquer sur <code>Demarrer</code> pour ouvrir votre VM</p>
 <p class="image-container"><img style="width: 718.11px" src="img\\d0d2a12b5f43d3ec.png"></p>
@@ -91,21 +85,24 @@
 <p class="image-container"><img style="width: 718.11px" src="img\\2ab170bd0f7a83c0.png"></p>
 <p>Ainsi le bug d&#39;affichage est résolu et vous pouvez positionner la VM en pleine écran ou sur une moitié d&#39;écran : </p>
 <p class="image-container"><img style="width: 718.11px" src="img\\25483cde87f7e2b0.png"></p>
+<p>Si la fenêtre se met à se réduire toute seul alors activer l&#39;option &#34;Redimensionner à 100%&#34;</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\d6d3b848d6cf2351.png"></p>
+<aside class="warning"><p><strong>Identifiants de la VM : </strong></p>
+<p>Login : tp</p>
+<p>Password : tp</p>
+</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Installation de Apache" duration="20">
         <h2 is-upgraded><strong>Installation des paquets</strong></h2>
-<aside class="special"><p><strong>❤ Quelle commande permet d&#39;installer des paquets sur Linux ?</strong></p>
-<p><code>sudo apt install <packet> <packet 2> etc ...</code></p>
-</aside>
-<aside class="special"><p><strong>❤ Quelle commande permet de désinstaller des paquets ainsi que leurs fichiers de configuration ? </strong></p>
-<p><code>sudo apt purge <paquets(s)></code></p>
-</aside>
+<p>Ouvrir un terminal, faire la commande : </p>
+<pre>sudo apt update</pre>
 <ol type="1" start="1">
-<li>Quelle commande permet d&#39;installer le paquet <code>apache2</code> ? Tapez cette commande dans le terminal de votre VM.</li>
+<li>En utilisant le cours, quelle commande permet d&#39;installer le paquet <code>apache2</code> ? Tapez cette commande dans le terminal de votre VM.</li>
 </ol>
+<p>sudo apt install apache2</p>
 <p>Une fois les paquets installés, ouvrez un des liens suivants dans votre navigateur :</p>
 <ul>
 <li><a href="http://localhost" target="_blank">http://localhost</a></li>
@@ -115,29 +112,6 @@
 <p class="image-container"><img style="width: 718.11px" src="img\\b24599cbce68397c.png"></p>
 <aside class="warning"><p>Selon la version installée, vous pouvez aussi avoir une page intitulée « Apache2 Ubuntu Default Page ».</p>
 </aside>
-<h2 is-upgraded><strong>Rappels de cours : </strong></h2>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet de changer de répertoire ?</strong></p>
-<p><code>cd [DIRECTORY]</code></p>
-</aside>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet de lister le contenu d&#39;un dossier ?</strong></p>
-<p><code>ls</code></p>
-</aside>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet de supprimer des fichiers ou des répertoires ?</strong></p>
-<p>Pour un fichier :  <code>rm FILE</code></p>
-<p>Pour un répertoire, on utilise l&#39;option récursive (-r) : <code>rm -r [DIRECTORY]</code></p>
-</aside>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet de créer un fichier ?</strong></p>
-<p><code>touch FILE</code></p>
-</aside>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet d&#39;afficher dans la console un fichier ?</strong></p>
-<p><code>cat [FILE]</code></p>
-</aside>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet d&#39;éditer un fichier ?</strong></p>
-<p><code>sudo</code> <code>nano [FILE]</code></p>
-</aside>
-<aside class="special"><p>❤ <strong>Quelle commande Linux permet d&#39;exécuter la commande précédente en sudo  ?</strong></p>
-<p><code>sudo !!</code></p>
-</aside>
 <h2 is-upgraded><strong>Personnalisation du serveur</strong></h2>
 <p>Nous allons modifier la page d&#39;accueil par défaut afin qu&#39;elle ressemble à ceci : </p>
 <p class="image-container"><img style="width: 718.11px" src="img\\fe932b0e1deb32a0.png"></p>
@@ -145,25 +119,40 @@
 <ol type="1" start="2">
 <li>Quelle commande affiche le contenu du dossier <code>/var/www/html</code>. Utiliser cette commande</li>
 </ol>
+<p>ls</p>
 <ol type="1" start="3">
-<li>Quelle commande affiche dans le console le fichier <code>index.html</code>. Pourquoi peut-on dire que ce fichier correspond à la page d&#39;accueil de Apache 2 ?</li>
+<li>Quelle commande affiche dans la console le fichier <code>index.html</code>. Pourquoi peut-on dire que ce fichier correspond à la page d&#39;accueil de Apache 2 ?</li>
 </ol>
+<p>cat index.html</p>
+<p>On lit dans ce fichier le texte &#34;It works&#34; qui été affiché sur la page <a href="http://localhost" target="_blank">http://localhost</a></p>
 <ol type="1" start="4">
 <li>Quelle commande supprime le fichier <code>index.html</code> ? Utiliser cette commande, si un message d&#39;erreur s&#39;affiche faire les commandes suivantes : </li>
 </ol>
 <p class="image-container"><img style="width: 718.11px" src="img\\94e5836b70c10e1c.png"></p>
+<p>rm index.html</p>
 <ol type="1" start="5">
 <li>Quelle commande crée un fichier <code>index.html</code> ? Utiliser cette commande.</li>
+</ol>
+<p>touch index.html</p>
+<ol type="1" start="6">
 <li>Quel code HTML permet de produire la page suivante. Ecrire ce code sur votre feuille ainsi que dans le fichier index.html</li>
 </ol>
 <p class="image-container"><img style="width: 718.11px" src="img\\fe932b0e1deb32a0.png"></p>
+<p>&lt;h1&gt;Titre : TP Serveur LAMP&lt;/h1&gt;</p>
+<p>LAMP est un accronyme pour Linux, Apache, MySQL, PHP qui permet de mettre en place un serveur web.</p>
+<p>&lt;ul&gt;</p>
+<p>  &lt;li&gt;Linux : le système d&#39;exploitation&lt;/li&gt;</p>
+<p>  &lt;li&gt;Apache : le serveur HTTP&lt;/li&gt;</p>
+<p>  &lt;li&gt;MySQL : Le SGBD&lt;/li&gt;</p>
+<p>  &lt;li&gt;PHP : Langage de programmation interprété&lt;/li&gt;</p>
+<p>&lt;/ul&gt;</p>
 <p>Aller sur le site <a href="http://localhost" target="_blank">http://localhost</a> ou <a href="http://127.0.0.1/" target="_blank">http://127.0.0.1/</a> pour visualiser le rendu de votre page.</p>
 <p class="image-container"><img style="width: 718.11px" src="img\\12ea6d47f11004d1.png"></p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Installation de PHP" duration="10">
+      <google-codelab-step label="Installation de PHP" duration="5">
         <p>Afin de faire un site Web dynamique, on a besoin d&#39;utiliser un langage de programmation. On utilisera ce langage pour générer en autre du code HTML qui sera utilisé dans les pages envoyées aux clients. C&#39;est donc le serveur Web qui se charge d&#39;exécuter le code avant d&#39;envoyer le résultat aux clients. Nous utiliserons ici le langage PHP.</p>
 <p class="image-container"><img style="width: 570.00px" src="img\\999701d46988831f.png"></p>
 <ol type="1" start="7">
@@ -180,14 +169,16 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Installation de MySQL" duration="20">
-        <aside class="special"><p><strong>❤ Qu&#39;est-ce qu&#39;un SGBD ?</strong></p>
+      <google-codelab-step label="Installation de MySQL" duration="30">
+        <ol type="1" start="8">
+<li>Qu&#39;est-ce qu&#39;un SGBD ?</li>
+</ol>
 <p>Un système de gestion de base de données (SGBD) est un logiciel installé sur un serveur qui permet de créer et de gérer des bases de données.</p>
-</aside>
-<ol type="1" start="8">
+<ol type="1" start="9">
 <li>Quelle commande permet d&#39;installer le paquet <code>mysql-server</code> ? Taper cette commande.</li>
 </ol>
-<p>Pour vérifier que MySQL est bien installé, lancer  la console MySQL: </p>
+<p>sudo apt install mysql-server</p>
+<p>Pour vérifier que MySQL est bien installé, lancer la console MySQL: </p>
 <pre>sudo mysql</pre>
 <p>Vous arriverez alors sur un prompt du type :</p>
 <p class="image-container"><img style="width: 718.11px" src="img\\49664ec7df57922d.png"></p>
@@ -202,25 +193,47 @@
 <p class="image-container"><img style="width: 554.00px" src="img\\805042e98b740ebb.png"></p>
 <p>Taper <code>exit</code> pour sortir de l&#39;environnement MySQL.</p>
 <p class="image-container"><img style="width: 516.00px" src="img\\75f3846361f7e778.png"></p>
-<p>Retourner dans la console MySQL et créer nouvelle base de données appelée <code>test</code> grâce à la commande : </p>
+<p>Retourner dans la console MySQL et créer une nouvelle base de données appelée <code>test</code> grâce à la commande : </p>
 <p class="image-container"><img style="width: 550.00px" src="img\\405f33d2c46d05b5.png"></p>
 <h2 is-upgraded><strong>Création d&#39;une table</strong></h2>
-<ol type="1" start="9">
-<li>En vous aidant de cet article : <a href="https://p-bruno.github.io/2TSSI-SISR-codelab-LAMP/Articles/Article-SQL-CREATE-TABLE.html" target="_blank">SQL CREATE TABLE</a>, quelles commandes permettent de créer une table intitulée <code>Notes</code> dans la BDD <code>test</code> ? Taper cette commande.</li>
-</ol>
+<p>Placez-vous dans la BDD test</p>
+<p>use test;</p>
+<p>Ouvrir le dossier <code>/Articles</code> situé à la racine du TP : </p>
+<p class="image-container"><img style="width: 488.00px" src="img\\cc3668762525bcbf.png"></p>
 <ol type="1" start="10">
-<li>En vous aidant de cet article : <a href="https://p-bruno.github.io/2TSSI-SISR-codelab-LAMP/Articles/Article-SQL-INSERT-INTO.html" target="_blank">SQL INSERT INTO</a>, quelle commande permet d&#39;ajouter les lignes ci-dessous dans la table <code>Notes</code> ? Taper cette commande.</li>
+<li>En vous aidant de l&#39;article : <code>Article-SQL-CREATE-TABLE.html</code>, quelle commande permet de créer une table intitulée <code>Notes</code> avec les colonnes ci-dessous ? Taper cette commande.</li>
+</ol>
+<p>(PS : numID est souligné car il s&#39;agit d&#39;une clé primaire.)</p>
+<p class="image-container"><img style="width: 718.11px" src="img\\2167b3ade3051ac6.png"></p>
+<p>CREATE TABLE Notes(</p>
+<p>    -&gt; numID INT PRIMARY KEY NOT NULL,</p>
+<p>    -&gt; nom VARCHAR(100),</p>
+<p>    -&gt; prenom VARCHAR(100),</p>
+<p>    -&gt; noteBDD INT,</p>
+<p>    -&gt; noteComSys INT</p>
+<p>    -&gt; );</p>
+<ol type="1" start="11">
+<li>En vous aidant de cet article : <code>Article-SQL-INSERT-INTO.html</code>, quelle commande permet d&#39;ajouter les lignes ci-dessous dans la table <code>Notes</code> ? Taper cette commande.</li>
 </ol>
 <p class="image-container"><img style="width: 718.11px" src="img\\2167b3ade3051ac6.png"></p>
-<ol type="1" start="11">
-<li>Quelle commande permet d&#39;afficher toutes les entrées de la table <code>Notes</code> ? Taper cette commande.</li>
+<p>INSERT INTO Notes (numID, nom, prenom, noteBDD, noteComSys)</p>
+<p>    -&gt; VALUES</p>
+<p>    -&gt; (10001,&#39;Ullman&#39;,&#39;Jeffrey&#39;,20,17),</p>
+<p>    -&gt; (10002,&#39;Doe&#39;,&#39;John&#39;,7,9),</p>
+<p>    -&gt; (20001,&#39;Doe&#39;,&#39;John&#39;,11,10),</p>
+<p>    -&gt; (20002,&#39;Palsistaime&#39;,&#39;James&#39;,10,-3),</p>
+<p>    -&gt; (20003,&#39;Broggs&#39;,&#39;Joe&#39;,14,11),</p>
+<p>    -&gt; (20004,&#39;Knuth&#39;,&#39;Donald&#39;,99,99);</p>
+<ol type="1" start="12">
+<li>Quelle commande permet d&#39;afficher toutes les entrées de la table <code>Notes</code> ? Taper cette commande. Aide : <code>Article-SQL-SELECT.html</code></li>
 </ol>
+<p>select * from Notes;</p>
 <p class="image-container"><img style="width: 718.11px" src="img\\4637e0967046c37.png"></p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Accès à la base de données en PHP" duration="20">
+      <google-codelab-step label="Accès à la base de données en PHP" duration="30">
         <p>Vous avez (presque) tout ce qu&#39;il faut pour créer votre site Web dynamique :</p>
 <p> Installez le paquet <code>php-mysql</code>.</p>
 <p> Relancez Apache avec la commande : </p>
@@ -234,15 +247,35 @@ mysql&gt;GRANT ALL ON test.* TO ‘toto&#39;@&#39;%&#39;</pre>
 <p class="image-container"><img style="width: 718.11px" src="img\\f6f7e7ca69044a99.png"></p>
 <p class="image-container"><img style="width: 651.00px" src="img\\31d614bced0be5c1.png"></p>
 <p>Le login de ce nouvel utilisateur est <code>toto</code>. Son mot de passe est <code>motdepasse</code>.</p>
-<ol type="1" start="12">
-<li>En utilisant cet article : <a href="https://p-bruno.github.io/2TSSI-SISR-codelab-LAMP/Articles/Article-PHP-MySQL-Insert-Data.html" target="_blank">PHP MySQL Insert Data</a>,écrire à l&#39;intérieur de info.php, le code permettant d&#39;ajouter la ligne ci-dessous lorsqu&#39;on tape la commande <code>php info.php</code>. </li>
+<ol type="1" start="13">
+<li>En utilisant cet article : <code>Article-PHP-MySQL-Insert-Data.html</code>,écrire à l&#39;intérieur de <code>info.php</code>, le code permettant d&#39;ajouter la ligne ci-dessous après avoir exécuter la commande <code>php info.php</code>. </li>
 </ol>
 <p class="image-container"><img style="width: 718.11px" src="img\\4a1ee956b1e160a1.png"></p>
+<p>&lt;?php</p>
+<p>$servername = &#34;localhost&#34;;</p>
+<p>$username = &#34;toto&#34;;</p>
+<p>$password = &#34;motdepasse&#34;;</p>
+<p>$dbname = &#34;test&#34;;</p>
+<p>// Create connection</p>
+<p>$conn = new mysqli($servername, $username, $password, $dbname);</p>
+<p>// Check connection</p>
+<p>if ($conn-&gt;connect_error) {</p>
+<p>  die(&#34;Connection failed: &#34; . $conn-&gt;connect_error);</p>
+<p>}</p>
+<p>$sql = &#34;INSERT INTO Notes (numID , nom , prenom , noteBDD , noteComSys )</p>
+<p>VALUES (20005, &#39;Doe&#39;,&#39;Doe&#39;, 0 , 0)&#34;;</p>
+<p>if ($conn-&gt;query($sql) === TRUE) {</p>
+<p>  echo &#34;New record created successfully&#34;;</p>
+<p>} else {</p>
+<p>  echo &#34;Error: &#34; . $sql . &#34;&lt;br&gt;&#34; . $conn-&gt;error;</p>
+<p>}</p>
+<p>$conn-&gt;close();</p>
+<p>?&gt;</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Insérer des données dans la table" duration="20">
+      <google-codelab-step label="Insérer des données dans la table" duration="40">
         <h2 is-upgraded><strong>Présentation du projet </strong></h2>
 <p>L&#39;objectif dans cette partie est que l&#39;utilisateur puisse ajouter une nouvelle ligne dans la table <code>Notes</code> en passant par une page web. Cela donne : </p>
 <p class="image-container"><img style="width: 718.11px" src="img\\59ff1426f68f1357.png"></p>
@@ -253,18 +286,85 @@ mysql&gt;GRANT ALL ON test.* TO ‘toto&#39;@&#39;%&#39;</pre>
 <h2 is-upgraded><strong>Documentation : </strong></h2>
 <p>Je vous invite à lire les articles suivants : </p>
 <ul>
-<li><a href="https://p-bruno.github.io/2TSSI-SISR-codelab-LAMP/Articles/Article-How-to-Insert-Form-Data-into-Database-using-PHP.html" target="_blank">How to Insert Form Data into Database using PHP ?</a></li>
-<li><a href="https://p-bruno.github.io/2TSSI-SISR-codelab-LAMP/Articles/Article-HTML-input-type-number.html" target="_blank">HTML &lt;input type=&#34;number&#34;&gt;</a></li>
+<li><code>Article-How-to-Insert-Form-Data-into-Database-using-PHP.html</code></li>
+<li><code>Article-HTML-input-type-number.html</code></li>
 </ul>
 <h2 is-upgraded><strong>Instructions</strong></h2>
 <ul>
 <li>Modifier le fichier <code>/var/www/html/index.html</code> afin d&#39;y ajouter un formulaire et obtenir le résultat final suivant : </li>
 </ul>
 <p class="image-container"><img style="width: 718.11px" src="img\\60c2a8ae0485b8c.png"></p>
+<p>&lt;h1&gt;Titre : TP Serveur LAMP&lt;/h1&gt;</p>
+<p>LAMP est un accronyme pour Linux, Apache, MySQL, PHP qui permet de mettre en place un serveur web.</p>
+<p>&lt;ul&gt;</p>
+<p>  &lt;li&gt;Linux : le système d&#39;exploitation&lt;/li&gt;</p>
+<p>  &lt;li&gt;Apache : le serveur HTTP&lt;/li&gt;</p>
+<p>  &lt;li&gt;MySQL : Le SGBD&lt;/li&gt;</p>
+<p>  &lt;li&gt;PHP : Langage de programmation interprété&lt;/li&gt;</p>
+<p>&lt;/ul&gt;</p>
+<p>&lt;h1&gt;Insertion d&#39;une nouvelle ligne dans la table &#34;Notes&#34;&lt;/h1&gt;</p>
+<p>&lt;form action=&#34;/insert.php&#34; method=&#34;post&#34;&gt;            </p>
+<p>&lt;p&gt;</p>
+<p>   &lt;label for=&#34;numID&#34;&gt;numID:&lt;/label&gt;</p>
+<p>   &lt;input type=&#34;number&#34; name=&#34;numID&#34; id=&#34;numID&#34;&gt;</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;p&gt;</p>
+<p>   &lt;label for=&#34;nom&#34;&gt;nom:&lt;/label&gt;</p>
+<p>   &lt;input type=&#34;text&#34; name=&#34;nom&#34; id=&#34;nom&#34;&gt;</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;p&gt;</p>
+<p>   &lt;label for=&#34;prenom&#34;&gt;prenom:&lt;/label&gt;</p>
+<p>   &lt;input type=&#34;text&#34; name=&#34;prenom&#34; id=&#34;prenom&#34;&gt;</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;p&gt;</p>
+<p>   &lt;label for=&#34;noteBDD&#34;&gt;noteBDD:&lt;/label&gt;</p>
+<p>   &lt;input type=&#34;number&#34; name=&#34;noteBDD&#34; id=&#34;noteBDD&#34;&gt;</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;p&gt;</p>
+<p>   &lt;label for=&#34;noteComSys&#34;&gt;noteComSys:&lt;/label&gt;</p>
+<p>   &lt;input type=&#34;number&#34; name=&#34;noteComSys&#34; id=&#34;noteComSys&#34;&gt;</p>
+<p>&lt;/p&gt;</p>
+<p>  &lt;input type=&#34;submit&#34; value=&#34;Submit&#34;&gt;</p>
+<p>&lt;/form&gt;</p>
 <ul>
 <li>Créer un nouveau fichier intitulé <code>/var/www/html/insert.php</code></li>
 <li>Dans ce fichier écrire le code PHP permettant de récupérer les informations du formulaire, puis d&#39;envoyer une requête SQL.</li>
 </ul>
+<p>&lt;?php</p>
+<p>$servername = &#34;localhost&#34;;</p>
+<p>$username = &#34;toto&#34;;</p>
+<p>$password = &#34;motdepasse&#34;;</p>
+<p>$dbname = &#34;test&#34;;</p>
+<p>if ($_SERVER[&#34;REQUEST_METHOD&#34;] == &#34;POST&#34;) {</p>
+<p>  // collect value of input field</p>
+<p>  // Taking all 5 values from the form data(input)</p>
+<p>  $numID =  $_REQUEST[&#39;numID&#39;];</p>
+<p>  $nom = $_REQUEST[&#39;nom&#39;];</p>
+<p>  $prenom =  $_REQUEST[&#39;prenom&#39;];</p>
+<p>  $noteBDD = $_REQUEST[&#39;noteBDD&#39;];</p>
+<p>  $noteComSys = $_REQUEST[&#39;noteComSys&#39;];</p>
+<p>  if (empty($numID)) {</p>
+<p>    echo &#34;$numID is empty&#34;;</p>
+<p>  } else {</p>
+<p>  }</p>
+<p>}</p>
+<p>// Create connection</p>
+<p>$conn = new mysqli($servername, $username, $password, $dbname);</p>
+<p>// Check connection</p>
+<p>if ($conn-&gt;connect_error) {</p>
+<p>  die(&#34;Connection failed: &#34; . $conn-&gt;connect_error);</p>
+<p>}</p>
+<p>// Performing insert query execution</p>
+<p>// here our table name is Notes</p>
+<p>$sql = &#34;INSERT INTO Notes (numID , nom , prenom , noteBDD , noteComSys )</p>
+<p>VALUES ($numID, &#39;$nom&#39;,&#39;$prenom&#39;, $noteBDD , $noteComSys)&#34;;</p>
+<p>if ($conn-&gt;query($sql) === TRUE) {</p>
+<p>  echo &#34;New record created successfully&#34;;</p>
+<p>} else {</p>
+<p>  echo &#34;Error: &#34; . $sql . &#34;&lt;br&gt;&#34; . $conn-&gt;error;</p>
+<p>}</p>
+<p>$conn-&gt;close();</p>
+<p>?&gt;</p>
 
 
       </google-codelab-step>
